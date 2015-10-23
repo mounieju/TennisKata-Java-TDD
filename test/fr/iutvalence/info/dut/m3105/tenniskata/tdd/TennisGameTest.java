@@ -16,12 +16,10 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void testScoreIs15_0WhenServerScores()
+	public void testScoreWhenServerScoresAfterTheBeginingOfTennisGame()
 	{
 		TennisGame tennisGame = new TennisGame();
-		tennisGame.serverScores();
-		Assert.assertEquals(tennisGame.getScore(),"fifteen-love");
-		
+		Assert.assertEquals(tennisGame.serverScores(),"fifteen-love");	
 	}
 
 	private void testScoreAtBegining(TennisGame tennisGame)

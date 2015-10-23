@@ -8,23 +8,26 @@ public class TennisGameTest
 {
 	
 
+
 	@Test
-	public void testScoreIs0_0InTheBeginingOfTennisGame()
+	public void testScoreIs0_0InTheBeginningOfTennisGame()
 	{
 		TennisGame tennisGame = new TennisGame();
-		testScoreAtBegining(tennisGame);
+		testScore(tennisGame,TennisGame.LOVE_ALL);
 	}
 	
 	@Test
-	public void testScoreWhenServerScoresAfterTheBeginingOfTennisGame()
+	public void testScoreWhenServerScoresAfterTheBeginningOfTennisGame()
 	{
 		TennisGame tennisGame = new TennisGame();
-		Assert.assertEquals(tennisGame.serverScores(),"fifteen-love");	
+		tennisGame.serverScores();
+		testScore(tennisGame,TennisGame.FIFTEEN_LOVE);	
 	}
 
-	private void testScoreAtBegining(TennisGame tennisGame)
+	
+	private void testScore(TennisGame tennisGame, String score) 
 	{
-		Assert.assertEquals(tennisGame.getScore(),TennisGame.LOVE_ALL);
+		Assert.assertEquals(tennisGame.getScore(),score);
 	}
 
 }

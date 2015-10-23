@@ -8,5 +8,10 @@ public class TennisGame
 		return "love-all";
 	}
 
+	public String serverScores() 
+	{
+		return "fifteen-love";		
+	}
+
 }
  

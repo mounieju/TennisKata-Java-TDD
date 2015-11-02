@@ -7,6 +7,9 @@ import org.junit.Test;
 public class TennisGameTest
 {
 	
+
+
+
 	@Test
 	public void testScoreIs0_0InTheBeginningOfTennisGame()
 	{
@@ -36,7 +39,7 @@ public class TennisGameTest
 		TennisGame tennisGame = new TennisGame();
 		tennisGame.receiverScores();
 		tennisGame.serverScores();
-		Assert.assertEquals(tennisGame.getScore(),"fifteen-all");	
+		testScore(tennisGame,TennisGame.FIFTEEN_ALL);	
 	}
 
 	

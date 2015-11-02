@@ -29,6 +29,15 @@ public class TennisGameTest
 		tennisGame.receiverScores();
 		testScore(tennisGame,TennisGame.LOVE_FIFTEEN);	
 	}
+	
+	@Test
+	public void testScoreWhenBothPlayersScoreAfterTheBeginningOfTennisGame()
+	{
+		TennisGame tennisGame = new TennisGame();
+		tennisGame.receiverScores();
+		tennisGame.serverScores();
+		Assert.assertEquals(tennisGame.getScore(),"fifteen-all");	
+	}
 
 	
 	private void testScore(TennisGame tennisGame, String score) 

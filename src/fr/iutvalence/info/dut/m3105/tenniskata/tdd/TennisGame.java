@@ -17,6 +17,10 @@ public class TennisGame
 		{
 			return LOVE_FIFTEEN;
 		}
+		if (this.receiverScore==15 && this.serverScore==15)
+		{
+			return "fifteen-all";
+		}
 		else
 		{
 			return LOVE_ALL;

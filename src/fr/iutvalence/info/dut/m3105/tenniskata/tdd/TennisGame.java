@@ -8,17 +8,23 @@ public class TennisGame
 	private int serverScore;
 	private int receiverScore;
 
+	public TennisGame()
+	{
+		this.receiverScore =0;
+		this.serverScore =0;
+	}
+	
 	public String getScore() 
 	{
-		if (this.serverScore==15 && this.receiverScore==0)
+		if (this.serverScore==1 && this.receiverScore==0)
 		{
 			return FIFTEEN_LOVE;
 		}
-		if (this.receiverScore==15 && this.serverScore==0)
+		if (this.receiverScore==1 && this.serverScore==0)
 		{
 			return LOVE_FIFTEEN;
 		}
-		if (this.receiverScore==15 && this.serverScore==15)
+		if (this.receiverScore==1 && this.serverScore==1)
 		{
 			return FIFTEEN_ALL;
 		}
@@ -31,12 +37,12 @@ public class TennisGame
 
 	public void serverScores() 
 	{	
-		this.serverScore += 15;
+		this.serverScore += 1;
 	}
 
 	public void receiverScores() 
 	{
-		this.receiverScore += 15;
+		this.receiverScore += 1;
 		
 	}
 
